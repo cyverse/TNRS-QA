@@ -1,0 +1,16 @@
+#  Test Suite list for running full regression minus the "skipped" tests
+#  Change the title of the test results
+#--name GUI
+
+#  GUI Testsuites
+GUI/Verify_Default_Landing_Page.robot
+GUI/Verify_TNRS_Application_Page.robot
+GUI/Verify_Instructions_Page.robot
+GUI/Verify_Sources_Page.robot
+GUI/Verify_About_Page.robot
+GUI/Verify_Collaborators_Page.robot
+GUI/Verify_Known_Issues_Page.robot
+GUI/Verify_Optimize_Your_Search_Page.robot
+GUI/Verify_How_to_Cite_Page.robot
+
+####
