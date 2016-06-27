@@ -280,7 +280,7 @@ Verify url key count
     Should Contain X Times    ${output}    "url": "    ${count}
 
 matchNames missing Retrieve parameter
-    [Tags]    API    regression
+    [Tags]    API    regression    TNRS-197
     Comment    Define variables
     ${output} =    Run    curl -s "http://${TNRSHost}/tnrsm-svc/matchNames?names=zea%20mays,acacia,solanum,saltea" | python -mjson.tool
     Log    ${output}
@@ -288,7 +288,7 @@ matchNames missing Retrieve parameter
     Should Contain    ${output}    Error message about missing retrieve parameter
 
 matchNames missing name parameter
-    [Tags]    API    regression
+    [Tags]    API    regression    TNRS-197
     Comment    Define variables
     ${output} =    Run    curl -s http://${TNRSHost}/tnrsm-svc/matchNames?retrieve=all
     Log    ${output}
@@ -297,7 +297,7 @@ matchNames missing name parameter
     Should Contain    ${output}    Error message about missing name parameter
 
 matchNames Retrieve parameter is empty
-    [Tags]    API    regression
+    [Tags]    API    regression    TNRS-197
     Comment    Define variables
     Comment    ${output} =    Run    curl -s "http://${TNRSHost}/tnrsm-svc/matchNames?retrieve=&names=zea%20mays,acacia,solanum,saltea" | python -mjson.tool
     ${output} =    Run    curl -s "http://${TNRSHost}/tnrsm-svc/matchNames?retrieve=&names=zea%20mays,acacia,solanum,saltea"
@@ -306,7 +306,7 @@ matchNames Retrieve parameter is empty
     Should Contain    ${output}    Error message about null retrieve parameter
 
 matchNames Name parameter is empty
-    [Tags]    API    regression
+    [Tags]    API    regression    TNRS-197
     Comment    Define variables
     ${output} =    Run    curl -s "http://${TNRSHost}/tnrsm-svc/matchNames?retrieve=all&name="
     Log    ${output}
